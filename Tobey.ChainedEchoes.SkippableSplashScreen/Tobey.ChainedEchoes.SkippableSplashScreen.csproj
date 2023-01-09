@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>Tobey.ChainedEchoes.SkippableSplashScreen</AssemblyName>
+    <Description>Makes the Chained Echoes splash screen skippable!</Description>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <Product>Skippable Splash Screen</Product>
+    <BaseOutputPath>bin\</BaseOutputPath>
+    <PackageOutputPath>$(OutputPath)</PackageOutputPath>
+  </PropertyGroup>
+
+  <Target Name="ZipBuild" AfterTargets="AfterBuild">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(OutputPath)\zip\plugins" />
+    <ZipDirectory SourceDirectory="$(OutputPath)\zip" DestinationFile="$(OutputPath)\$(Product).zip" Overwrite="true" />
+  </Target>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="1.1.0" />
+    <PackageReference Include="UnityEngine.Modules" Version="2020.3.36" IncludeAssets="compile" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>E:\XboxGames\Chained Echoes Release\Content\Chained Echoes_Data\Managed\Assembly-CSharp-publicized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>E:\XboxGames\Chained Echoes Release\Content\Chained Echoes_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
