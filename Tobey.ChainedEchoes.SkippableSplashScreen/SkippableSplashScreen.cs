@@ -37,12 +37,11 @@ public class SkippableSplashScreen : BaseUnityPlugin
             section: "General",
             key: "Auto-skip splash scene",
             defaultValue: false,
-            description: "When enabled, the splash screen will be automatically skipped as soon as possible without user input."
+            description: "When enabled, the splash screen will be automatically skipped as soon as possible without the need to press a button."
         );
     }
 
     private void OnEnable() => Harmony.PatchAll(typeof(SkippableSplashScreen));
-
     private void OnDisable() => Harmony.UnpatchSelf();
 
     private IEnumerator HandleSplashScreenSkip()
