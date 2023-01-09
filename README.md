@@ -6,8 +6,6 @@ Ever started up Chained Echoes and wished you could skip the splash screen? Well
 
 ## Features
 
-<img src="assets/config.png" width=33% align="right"/>
-
 By default, installing Skippable Splash Screen enables you to press any key on any input to skip the splash screen as fast as is possible. A prompt appears at the bottom of the screen when Skippable Splash Screen is ready to skip.
 
 It can also be configured to automatically skip the splash screen without any input, if preferred.
@@ -29,6 +27,8 @@ It can also be configured to automatically skip the splash screen without any in
 4. Launch the game and enjoy being able to skip!
 
 If you would like to enable auto-skip (off by default), see [Configuration](#configuration) below:
+
+<img src="assets/config.png" width=33% align="right"/>
 
 ## Configuration
 
