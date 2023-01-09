@@ -1,4 +1,4 @@
-<center><img src="assets/hero.png" width=50% /></center>
+![Skippable Splash Screen for Chained Echoes](assets/hero.png)
 
 # Skippable Splash Screen for Chained Echoes
 
@@ -28,9 +28,9 @@ It can also be configured to automatically skip the splash screen without any in
 
 If you would like to enable auto-skip (off by default), see [Configuration](#configuration) below:
 
-<img src="assets/config.png" width=33% align="right"/>
-
 ## Configuration
+
+![Configuring Skippable Splash Screen](assets/config.png)
 
 Assuming you have installed [Configuration Manager](https://github.com/BepInEx/BepInEx.ConfigurationManager), configuration is a breeze. Simply press F1 once the game has launched to change the settings as you wish.
 
