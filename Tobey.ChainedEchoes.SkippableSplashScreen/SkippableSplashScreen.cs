@@ -14,7 +14,7 @@ public class SkippableSplashScreen : BaseUnityPlugin
     internal static SkippableSplashScreen Instance;
     internal static ManualLogSource Log => Instance.Logger;
 
-    internal Harmony Harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+    internal Harmony Harmony = new(PluginInfo.PLUGIN_GUID);
 
     private void Awake()
     {
